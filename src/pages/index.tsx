@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
+import { GetServerSideProps } from "next";
+import { getSession } from "next-auth/react";
 
 export default function Home() {
   return (
@@ -36,3 +38,4 @@ export default function Home() {
     </div>
   );
 }
+
