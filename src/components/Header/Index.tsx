@@ -36,12 +36,20 @@ export default function Header() {
             Welcome, {session.user?.name}
           </button>
         ) : (
-          <button
-            className="text-white border-white border-[1px] py-1 px-5 rounded-2xl hover:bg-white hover:text-[#0f0f0f] transition-all duration-300"
-            onClick={(e) => signIn()}
-          >
-            Login
-          </button>
+          <nav className="flex justify-center">
+            <button
+              className="text-white border-white border-[1px] py-1 px-5 rounded-2xl hover:bg-white hover:text-[#0f0f0f] transition-all duration-300"
+              onClick={(e) => signIn()}
+            >
+              Already have an account? Login
+            </button>
+            <button
+              className="text-white border-white border-[1px] py-1 px-5 rounded-2xl hover:bg-white hover:text-[#0f0f0f] transition-all duration-300"
+              onClick={(e) => signIn()}
+            >
+             Don't have an account? Register
+            </button>
+          </nav>
         )}
       </section>
     </header>
